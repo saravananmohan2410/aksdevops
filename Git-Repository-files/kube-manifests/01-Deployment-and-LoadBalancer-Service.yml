@@ -16,9 +16,11 @@ spec:
     spec:
       containers:
         - name: app1-nginx
-          image: aksdevopsacr.azurecr.io/custom2aksnginxapp1
+          image: saravananmohan241086.azurecr.io/saravananmohanaksbuildandpush:10
           ports:
             - containerPort: 80
+      imagePullSecrets:
+        - name: acrdemo2ss-secret      
 ---
 apiVersion: v1
 kind: Service
